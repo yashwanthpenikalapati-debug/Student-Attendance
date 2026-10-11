@@ -17,10 +17,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to Azure Web App
-        id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'slik'
-          slot-name: 'Production'
           package: '.'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_35AFCC2793A24FDDA2F20EE6563EDE70 }}
